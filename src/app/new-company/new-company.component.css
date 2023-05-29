@@ -1,0 +1,54 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  color: lightgray;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  text-align: center;
+  margin-top: 12%;
+
+}
+
+.selectdivs{
+  margin-right: 10px;
+}
+
+.btn{
+  text-align: center;
+  margin-top: 4%;
+}
+
+mat-label{
+  color: purple;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+.mat-stepper{
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  text-align: center;
+  margin-top: 12%;
+}
+
+.conff{
+  /* width: 50px; */
+  height: 20%;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  margin-left: 5px;
+}

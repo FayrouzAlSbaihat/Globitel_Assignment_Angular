@@ -1,0 +1,41 @@
+<div>
+    <button (click)="ExportToExcel()" mat-flat-button color="primary">Export To Excel</button> 
+</div>
+
+<table mat-table id="excel-table" [dataSource]="dataSource" class="mat-elevation-z8">
+
+<ng-container matColumnDef="name">
+  <th mat-header-cell *matHeaderCellDef> {{'CompanyList.Name'| translate }} </th>
+  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+</ng-container>
+
+<ng-container matColumnDef="email">
+  <th mat-header-cell *matHeaderCellDef>{{'CompanyList.Email'| translate }} </th>
+  <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+</ng-container>
+
+<ng-container matColumnDef="phone">
+  <th mat-header-cell *matHeaderCellDef> {{'CompanyList.Phone'| translate }} </th>
+  <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+</ng-container>
+
+<ng-container matColumnDef="size">
+  <th mat-header-cell *matHeaderCellDef>{{'CompanyList.size'| translate }} </th>
+  <td mat-cell *matCellDef="let element"> {{element.size}} </td>
+</ng-container>
+
+<ng-container matColumnDef="sector_Id">
+  <th mat-header-cell *matHeaderCellDef>{{'CompanyList.Sector'| translate }} </th>
+  <td mat-cell *matCellDef="let element"> {{element.sector_Id}} </td>
+</ng-container>
+
+<ng-container matColumnDef="action">
+  <th mat-header-cell *matHeaderCellDef> {{'CompanyList.Action'| translate }} </th>
+  <td mat-cell *matCellDef="let element">
+  <button (click)="onEdit(element.id)" mat-flat-button color="primary">Edit</button> 
+  </td>
+</ng-container>
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

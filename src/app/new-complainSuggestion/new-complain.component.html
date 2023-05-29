@@ -1,0 +1,28 @@
+<form [formGroup]="forms" class="example-form">
+    <table class="example-full-width" cellspacing="2"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field></td>
+
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone">
+      </mat-form-field></td>
+      
+    </tr></table>
+  
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput formControlName="comment" placeholder="Suggestion/Complains..."></textarea>
+      </mat-form-field>
+      
+    </p>
+
+    <div calss="cssofbtn">
+        <button mat-flat-button (click)="SendSuggestion()" style="margin-left: 13%; " color="primary" >Send as suggestion </button>
+        <button class="signUp" (click)="SendComplain()"  style="margin-left: 2%;" mat-flat-button color="warn"> Send as complain</button>
+      </div>
+
+  </form>

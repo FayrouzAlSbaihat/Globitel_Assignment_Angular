@@ -1,0 +1,77 @@
+{
+    "home":{
+        "welcome":"ًWelcome",
+        "New_Company":"New Company",
+        "CompanyList":"Company List",
+        "SignUp":"SignUp",
+        "User_List":"User List",
+        "Complain/Suggestion":"Complain/Suggestion",
+        "ComplainList":"Complain List",
+        "ComplainHistory":"ComplainHistory",
+        "Suggestion_List":"Suggestion List",
+        "Suggestion_History":"Suggestion_History",
+        "New_Role":"New_Role",
+        "DashBoard":"DashBoard",
+        "Arabic":"Arabic",
+        "NewComplain":"New Complain"
+
+    },
+
+    "CompanyList":{
+        "Export_To_Excel":"Export To Excel",
+        "Name":"Name",
+        "Email":"Email",
+        "Phone":"Phone",
+        "size":"size of company",
+        "Sector":"Sector",
+        "Action":"Action",
+        "Delete":"Delete"
+    },
+
+    "ComplainHistory":{
+        "Complain":"Complain",
+        "Name":"Name",
+        "Email":"Email",
+        "Phone":"Phone"
+    },
+
+    "ComplainList":{
+        "Complain":"Complain",
+        "Name":"Name",
+        "Phone":"Phone",
+        "SendTo":"Send To"
+    },
+
+    "DashBoard":{
+        "Number_of_Complains":"Number of Complains",
+        "Number_of_Suggestions":" Number of Suggestions",
+        "Number_of_Company":" Number of Company",
+        "Number_of_Users":"Number of Users"
+
+    },
+
+    "Login":{
+        "Login":"Login",
+        "Please_enter_your_name":"Please enter your name",
+        "Password":"Password",
+        "SignUp":"SignUp"
+
+    },
+
+    "NewCompany":{
+        "Fill_out_company_name":"Fill out company name",
+        "Name":"Name",
+        "Next":"Next",
+        "Email":"Email",
+        "Back":"Back",
+        "Fill_out_company_phone":"Fill out company phone",
+        "Fill_out_Sector":"Fill out Sector",
+        "Sector":"Sector",
+        "Fill_out_company_size":"Fill out company size"
+
+    }
+
+
+
+    
+}

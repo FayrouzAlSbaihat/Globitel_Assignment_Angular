@@ -1,0 +1,41 @@
+<form [formGroup]="forms">
+<div id="loginpage">
+    <h1>{{'Login.Login'| translate }}</h1>
+    
+  <p> 
+      <mat-form-field appearance="outline">
+        <mat-label>{{'Login.Please_enter_your_name'| translate }}</mat-label>
+        <input matInput placeholder="Name" #txtuname formControlName="username">
+        <button mat-icon-button matSuffix>
+          <mat-icon>perm_identity</mat-icon>
+        </button>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>{{'Login.Password'| translate }}</mat-label>
+        <input [type]="hide ? 'password' : 'text'" matInput placeholder="Password" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </p>
+
+    <div>
+      <mat-form-field>   
+        <mat-label>Choose Language</mat-label>
+        <mat-select (selectionChange)="OnChangeLanguage($event.value)">
+          <mat-option value="en">English</mat-option>
+          <mat-option value="ar">Arabic</mat-option>
+    
+        </mat-select>
+      </mat-form-field>
+      </div>
+  <div>
+    <button mat-flat-button color="primary" (click)="onLogin()">{{'Login.Login'| translate }} </button>
+    <button class="signUp" mat-flat-button color="accent" (click)="onSignUp()">  {{'Login.SignUp'| translate }}</button>
+  </div>
+
+  </div>
+
+</form>

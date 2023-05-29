@@ -1,0 +1,52 @@
+<form [formGroup]="forms">
+<div id="loginpage">
+    <h1>SignUp</h1>
+  <p> 
+      <mat-form-field appearance="outline">
+        <mat-label>Please enter your name</mat-label>
+        <input matInput formControlName="name" placeholder="Name">
+        <button mat-icon-button matSuffix>
+          <mat-icon>perm_identity</mat-icon>
+        </button>
+        <small *ngIf="forms.controls['name'].touched && forms.hasError('required','name')">Name is required</small>
+      </mat-form-field>
+    </p>
+
+    <p> 
+      <mat-form-field appearance="outline">
+        <mat-label>Please enter your Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+        <button mat-icon-button matSuffix>
+          <mat-icon>perm_identity</mat-icon>
+        </button>
+        <small *ngIf="forms.controls['email'].touched && forms.hasError('required','email')">Email is required</small>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input [type]="hide ? 'password' : 'text'" matInput placeholder="Password" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <small *ngIf="forms.controls['password'].touched && forms.hasError('required','password')">password is required</small>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input [type]="hide ? 'password' : 'text'" matInput placeholder="Confirm Password" formControlName="confirmPassword">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <small *ngIf="forms.controls['confirmPassword'].touched && forms.hasError('required','password')">confirmPassword is required</small>
+      </mat-form-field>
+    </p>
+ 
+  <div>
+    <button class="signUp" mat-flat-button color="accent" (click)="OnSignUp()"> SignUp</button>
+  </div>
+  </div>
+</form>

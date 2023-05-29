@@ -1,0 +1,72 @@
+<mat-toolbar>
+    <div>
+    Welcome
+    <mat-icon > sentiment_satisfied_alt</mat-icon>
+     {{name}}
+    </div>
+    <!-- <p> {{'home.welcome'| translate }} </p> -->
+    <div class="loggingout">
+    <a class="link-body-emphasis d-inline-flex text-decoration-none rounded" (click)="logout()">LogOut</a>
+</div>
+
+
+</mat-toolbar>
+<!-- *ngIf="UserRole=='Admin' -->
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+        <p class="designation">{{name}}</p>
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button" >
+            <mat-icon>home</mat-icon>
+            <span routerLink="/Home/DashBoard">{{'home.DashBoard'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button" >
+            <mat-icon>home</mat-icon>
+            <span routerLink="/Home/NewCompany">{{'home.New_Company'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>person</mat-icon>
+            <span routerLink="/Home/CompanyList">{{'home.CompanyList'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>person</mat-icon>
+            <span routerLink="/Home/SignUp">{{'home.SignUp'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>person</mat-icon>
+            <span routerLink="/Home/UserList">{{'home.User_List'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>message</mat-icon>
+            <span routerLink="/Home/NewComplain">{{'home.NewComplain'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>message</mat-icon>
+            <span routerLink="/Home/ComplainList">{{'home.ComplainList'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>message</mat-icon>
+            <span routerLink="/Home/ComplainHistory">{{'home.ComplainHistory'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>message</mat-icon>
+            <span routerLink="/Home/SuggestionList">{{'home.Suggestion_List'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>message</mat-icon>
+            <span routerLink="/Home/SuggestionHistory">{{'home.Suggestion_History'| translate }}</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>message</mat-icon>
+            <span routerLink="/Home/NewRole">{{'home.New_Role'| translate }}</span>
+        </button>
+    
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z4">
+            <!-- Main Content -->
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

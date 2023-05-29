@@ -1,0 +1,14 @@
+#loginpage{
+    /* margin-top: 300px;
+    margin-left: 300px; */
+    text-align: center;
+    margin-top: 12%;
+}
+
+.signUp{
+    margin-left: 1%;
+}
+
+mat-label{
+    color: purple;
+}

@@ -1,0 +1,78 @@
+{
+    "home":{
+        "welcome":"اهلا وسهلا",
+        "New_Company":"شركة جديدة",
+        "CompanyList":"قائمة الشركات",
+        "SignUp":"انشاء حساب",
+        "User_List":"قائمة المستخدمين",
+        "Complain/Suggestion":"شكاوى-اقتراح",
+        "ComplainList":"قائمة الشكاوي",
+        "ComplainHistory":"سجل الشكاوي",
+        "Suggestion_List":"قائمة الاقتراحات",
+        "Suggestion_History":"سجل الاقتراحات ",
+        "New_Role":"وظيفة جديدة",
+        "DashBoard":"لوحة القيادة",
+        "Arabic":"العربية",
+        "NewComplain":"تقديم شكوى"
+    },
+
+    "CompanyList":{
+        "Export_To_Excel":"تصدير الى اكسل",
+        "Name":"الاسم",
+        "Email":"البريد الإلكتروني",
+        "Phone":"رقم الهاتف",
+        "size":"حجم الشركة",
+        "Sector":"قطاع",
+        "Action":"حدث",
+        "Delete":"حذف"
+    },
+
+    "ComplainList":{
+        "Complain":"شكوى",
+        "Name":"الاسم",
+        "Phone":"رقم الهاتف",
+        "SendTo":"ارسال الى"
+    },
+
+    "ComplainHistory":{
+        "Complain":"الشكوى",
+        "Name":"الاسم",
+        "Email":"البريد الإلكتروني",
+        "Phone":"رقم الهاتف"
+    },
+
+
+    "DashBoard":{
+        "Number_of_Complains":"عدد الشكاوي",
+        "Number_of_Suggestions":" عدد الاقتراحات",
+        "Number_of_Company":" عدد الشركات",
+        "Number_of_Users":"عدد المستخدمين"
+
+    },
+
+    "Login":{
+        "Login":"تسجيل الدخول",
+        "Please_enter_your_name":"ادخال اسمك",
+        "Password":"كلمة المرور",
+        "SignUp":"انشاء حساب"
+
+    },
+
+    "NewCompany":{
+        "Fill_out_company_name":"ادخل اسم الشركة",
+        "Name":"الاسم",
+        "Next":"التالي",
+        "Email":"البريد الإلكتروني",
+        "Back":"الرجوع",
+        "Fill_out_company_phone":"ادخل رقم هاتف الشركة",
+        "Fill_out_Sector":"اختر القطاع",
+        "Sector":"Sector",
+        "Fill_out_company_size":"اختر حجم الشركة"
+
+    }
+
+
+
+
+
+}

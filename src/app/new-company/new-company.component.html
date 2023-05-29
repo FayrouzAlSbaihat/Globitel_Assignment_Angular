@@ -1,0 +1,166 @@
+<!-- <form [formGroup]="forms">
+
+<div class="container">
+<h2>New Company</h2>
+  <div>
+<div class="example-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="pat@example.com" formControlName="email" required>
+    <small *ngIf="forms.controls['email'].touched && forms.hasError('required','email')">Email is required</small>
+  </mat-form-field>
+</div>
+
+<div class="example-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Enter Company Name</mat-label>
+    <input matInput placeholder="Company Name" formControlName="name" required>
+    <small *ngIf="forms.controls['name'].touched && forms.hasError('required')">company name is required</small>
+  </mat-form-field>
+</div>
+
+<div class="example-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Enter Company phone</mat-label>
+    <input matInput placeholder="Company phone" formControlName="phone" required>
+    <small *ngIf="forms.controls['phone'].touched && forms.hasError('required')">company phone is required</small>
+  </mat-form-field>
+</div>
+
+</div>
+
+<div class="selectdivs">
+  <div style="margin-top:20px;">
+<mat-form-field appearance="outline" style="margin-right: 20px;">
+  <mat-label>Size</mat-label>
+  <mat-select formControlName="size">
+    <mat-option>Select size</mat-option>
+    <mat-option value="1">1-8</mat-option>
+    <mat-option value="2">9-20</mat-option>
+    <mat-option value="3">more than 20</mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+
+<div style="margin-top: 40px;">
+<mat-form-field appearance="outline">
+  <mat-label>Sector</mat-label>
+  <mat-select formControlName="sector_Id">
+    <mat-option>Select Sector</mat-option>
+    <mat-option value="1">Information technology</mat-option>
+    <mat-option value="2">Medical</mat-option>
+    <mat-option value="3">Education</mat-option>
+    <mat-option value="4">Agriculture</mat-option>
+    <mat-option value="5">Marketing</mat-option>
+    <mat-option value="6">Networking</mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+</div>
+</div>
+
+<div class="btn">
+  <button class="Add" mat-flat-button color="accent" (click)="onSave()">Save company</button>
+</div>
+
+</form>
+ -->
+
+ <!-- *ngIf="UserRole=='Admin'" -->
+
+<form [formGroup]="forms" >
+  <div class="conff">
+    <mat-stepper #stepper>
+      <mat-step errorMessage="Name is required.">
+
+        <ng-template matStepLabel>{{'NewCompany.Fill_out_company_name'| translate }}</ng-template>
+        <mat-form-field>
+          <mat-label>{{'NewCompany.Name'| translate }}</mat-label>
+          <input matInput placeholder="Company Name" formControlName="name" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext color="accent">{{'NewCompany.Next'| translate }}</button>
+        </div>
+
+      </mat-step>
+      <mat-step errorMessage="email is required.">
+        <ng-template matStepLabel>Fill out company Email</ng-template>
+        <mat-form-field>
+          <mat-label>{{'NewCompany.Email'| translate }}</mat-label>
+          <input matInput placeholder="Email" formControlName="email" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious color="primary">{{'NewCompany.Back'| translate }}</button>
+          <button mat-button matStepperNext color="accent">{{'NewCompany.Next'| translate }}</button>
+        </div>
+      </mat-step>
+
+      <mat-step errorMessage="phone is required.">
+        <ng-template matStepLabel>{{'NewCompany.Fill_out_company_phone'| translate }}</ng-template>
+        <mat-form-field>
+          <mat-label>Company phone</mat-label>
+          <input matInput placeholder="phone" formControlName="phone" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious color="primary">Back</button>
+          <button mat-button matStepperNext color="accent">Next</button>
+        </div>
+      </mat-step>
+
+
+      <mat-step errorMessage="sectror is required.">
+        <ng-template matStepLabel>{{'NewCompany.Fill_out_Sector'| translate }}</ng-template>
+        <mat-form-field>
+          <mat-label>{{'NewCompany.Sector'| translate }}</mat-label>
+          <input matInput required>
+          <mat-select formControlName="sector_Id">
+            <mat-option>Select Sector</mat-option>
+            <mat-option value="Information technology">Information technology</mat-option>
+            <mat-option value="Medical">Medical</mat-option>
+            <mat-option value="Education">Education</mat-option>
+            <mat-option value="Agriculture">Agriculture</mat-option>
+            <mat-option value="Marketing">Marketing</mat-option>
+            <mat-option value="Networking">Networking</mat-option>
+          </mat-select>
+
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious color="primary">Back</button>
+          <button mat-button matStepperNext color="accent">Next</button>
+        </div>
+
+      </mat-step>
+
+      <mat-step errorMessage="Size is required.">
+        <ng-template matStepLabel>{{'NewCompany.Fill_out_company_size'| translate }}</ng-template>
+        <mat-form-field>
+          <mat-label>Company Size</mat-label>
+          <input matInput required>
+          <mat-select formControlName="size">
+            <mat-option>Select Size</mat-option>
+            <mat-option value="1-8">1-8</mat-option>
+            <mat-option value="9-20">9-20</mat-option>
+            <mat-option value="more than 20">more than 20</mat-option>
+          </mat-select>
+
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious color="primary">Back</button>
+          <button mat-button matStepperNext color="accent">Next</button>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+          <button mat-button color="primary" matStepperPrevious>Back</button>
+          <button mat-button color="accent" *ngIf="this.Id;else EditButton" (click)="onEdit()">Edit Company</button>
+          <ng-template #EditButton><button mat-button color="accent"(click)="onSave()">Save Company</button></ng-template>
+
+
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</form>
